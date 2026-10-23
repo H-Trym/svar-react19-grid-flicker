@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.gantt {
+  height: calc(100vh - 96px);
+  margin-top: 96px;
+}
+
+/* Let both Willow wrappers fill the fixed-height container. */
+.gantt .wx-theme,
+.gantt .wx-theme > * {
+  height: 100%;
+}
+
+/* Colored summary rows and bars (CSS only) make a one-row shift easy to see. */
+.gantt .wx-row[data-id*='project-'] .wx-cell {
+  background: #1f5fa8;
+  color: #fff;
+}
+
+.gantt .wx-row[data-id*='group-'] .wx-cell {
+  background: #e6f0fa;
+}
+
+.gantt .wx-bar[data-id*='project-'] {
+  background: #1f5fa8;
+}
+
+/* ?fullwidth: stretch project bars across the chart like TankCleaning's cargo dividers. */
+.gantt.fullwidth .wx-bar[data-id*='project-'] {
+  left: 0 !important;
+  width: 100% !important;
+  border-radius: 0;
+}
+
+.probe {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  height: 96px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  background: #f6f7f9;
+  font-size: 14px;
+}
+
+.probe strong {
+  font-size: 18px;
+}
+
+.probe output {
+  min-width: 3ch;
+  font-size: 28px;
+  font-variant-numeric: tabular-nums;
+}
+
+.probe.hit {
+  background: #ffd9d9;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "svar-react19-grid-flicker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:react19": "vite --port 5191 --strictPort",
+    "dev:react18": "vite --mode react18 --port 5181 --strictPort",
+    "dev:react19-fixed": "vite --mode react19-fixed --port 5192 --strictPort",
+    "prod:react19": "vite build --outDir dist-react19 && vite preview --outDir dist-react19 --port 4191 --strictPort",
+    "prod:react18": "vite build --mode react18 --outDir dist-react18 && vite preview --outDir dist-react18 --port 4181 --strictPort",
+    "prod:react19-fixed": "vite build --mode react19-fixed --outDir dist-react19-fixed && vite preview --outDir dist-react19-fixed --port 4192 --strictPort"
+  },
+  "dependencies": {
+    "@svar-ui/react-gantt": "2.8.1",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react18": "npm:react@18.3.1",
+    "react-dom18": "npm:react-dom@18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.3.5"
+  },
+  "stackblitz": {
+    "startCommand": "npm run dev:react19"
+  }
+}
